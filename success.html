@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Success</title>  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LN4LRL6LTG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LN4LRL6LTG');
+</script>
+</head>
 <body>
   <h2>Payment Successful 🎉</h2>
+
+  <script>
+    gtag('event', 'payment_success'); // 👈 成功埋点
+  </script>
+
 </body>
 </html>
