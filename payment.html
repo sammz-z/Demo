@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LN4LRL6LTG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LN4LRL6LTG');
+</script>
+</head>
 <body>
   <h2>Payment Page</h2>
-  <button onclick="location.href='success.html'">
-    Confirm Payment
-  </button>
+
+  <!-- ❗这里是关键变化 -->
+  <button onclick="trackConfirm()">Confirm Payment</button>
+
+  <script>
+    function trackConfirm() {
+      gtag('event', 'click_confirm');  // 👈 埋点
+      location.href='success.html';    // 👈 跳转
+    }
+  </script>
+
 </body>
 </html>
