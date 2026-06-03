@@ -14,8 +14,15 @@
 </head>
 <body>
   <h1>Send Money Globally</h1>
-  <button onclick="location.href='payment.html'">
-    Send Money
-  </button>
+
+  <button onclick="trackStart()">Send Money</button>
+
+  <script>
+    function trackStart() {
+      gtag('event', 'click_start');
+      location.href='payment.html';
+    }
+  </script>
+
 </body>
 </html>
